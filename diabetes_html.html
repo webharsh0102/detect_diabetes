@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetes Risk Predictor</title>
+  <link rel="stylesheet" href="diabcs.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🧪 Diabetes Risk Predictor</h1>
+
+    <form id="predictForm">
+      <div class="input-group">
+        <label>Pregnancies (0–10)</label>
+        <input type="number" name="Pregnancies" min="0" max="10"  placeholder="Enter value or -1 if unknown">
+      </div>
+      <div class="input-group">
+        <label>Glucose (mg/dL)</label>
+        <input type="number" name="Glucose" min="0"  placeholder="Enter value or -1 if unknown">
+      </div>
+      <div class="input-group">
+        <label>Blood Pressure (mm Hg)</label>
+        <input type="number" name="BloodPressure" min="0"  placeholder="Enter value or -1 if unknown">
+      </div>
+      <div class="input-group">
+        <label>Skin Thickness (mm)</label>
+        <input type="number" name="SkinThickness" min="0"  placeholder="Enter value or -1 if unknown">
+      </div>
+      <div class="input-group">
+        <label>Insulin (µU/mL)</label>
+        <input type="number" name="Insulin" min="0" placeholder="Enter value or -1 if unknown">
+      </div>
+      <div class="input-group">
+        <label>BMI (kg/m²)</label>
+        <input type="number" name="BMI" step="0.1"  placeholder="Enter value or -1 if unknown">
+      </div>
+      <div class="input-group">
+        <label>Diabetes Pedigree Function</label>
+        <input type="number" name="DiabetesPedigreeFunction" step="0.01"  placeholder="Enter value or -1 if unknown">
+      </div>
+      <div class="input-group">
+        <label>Age (years)</label>
+        <input type="number" name="Age" min="1"  placeholder="Enter value or -1 if unknown">
+      </div>
+
+      <div class="input-group">
+        <label>Upload up to 5 medical report images (Optional)</label>
+        <input type="file" name="images" multiple accept="image/*">
+      </div>
+
+      <p class="note">
+        📄 <strong>Note:</strong> Upload reports like <em>CBC, Blood Glucose (Fasting/PP), Insulin</em>, etc.  
+        If you're unsure of any input, leave default or enter <strong>-1</strong>.
+      </p>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="diabjs.js"></script>
+</body>
+</html>
